@@ -41,7 +41,7 @@
 
 		
         <section class="score-panel">
-        	<ul class="stars">
+        	<ul class="stars" id="st">
         		<li><i class="fa fa-star"></i></li>
         		<li><i class="fa fa-star"></i></li>
         		<li><i class="fa fa-star"></i></li>
@@ -114,12 +114,8 @@
         </div>
         <div class="modal-body">
          <h4 class="modal-title">Moves Taken : <span id="move">0</span></h4>
-<h4><pre> Ratings :
-<i class="fa fa-star" style="color:yellow"></i><i class="fa fa-star" style="color:yellow"></i><i class="fa fa-star" style="color:yellow"></i>:Less Than 20 Moves
-<i class="fa fa-star" style="color:yellow"></i><i class="fa fa-star" style="color:yellow"></i>:Less Than 26 Moves
-<i class="fa fa-star" style="color:yellow"></i>:Less Than 30 moves
-No Stars : More Than 30 moves...
-</pre></h4>
+		 <h4>Time Taken :<span id="timer1"> </span></h4>
+<h4>	Ratings :<ul class="stars line" id="st1"></ul></h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" onclick="restart()">Play Again !!!</button>

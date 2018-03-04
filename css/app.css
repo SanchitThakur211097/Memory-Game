@@ -37,7 +37,10 @@ h1 {
     font-weight: 300;
 }
 
-
+.line li{
+	display:inline;
+	color:yellow;
+}
 .deck {
     width: 660px;
     min-height: 680px;

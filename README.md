@@ -1,20 +1,22 @@
-# Memory Game Project
+* Memory Game Project
 
-## Table of Contents
+* Introduction-
+There's a deck of cards with different icons, which is used to check the user's memory. The user has to match the pairs of icons.
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* Challenge-
+User has to match the pair of cards in as less moves and time as possible. User will be rated based on his performance.
 
-## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+* Instructions-
+- Click on the card
+- Match the pair of cards by remembering the unveiled card.
+- Try to match the cards in less moves and times.
 
-To get started, open `js/app.js` and start building out the app's functionality
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+* How I built the Memory Game-
+- I manipulated the DOM with Javascript, modified HTML and also styled them.
+- When the game is refreshed the pack of cards is reshuffled.
+- Created a counter and timer to record the no. of moves and time taken by the user.
+- Rating is being given to the user based on the performance.
+- Several effects and animations have been added to make the game more attractive and fun.
+- Pop up model created in both beginning and end.
