@@ -47,8 +47,8 @@ function flip(block)
 	{
 		console.log(block);
 		console.log(storeid);
-			document.getElementById(block).className = " card match";
-			document.getElementById(storeid).className = " card match";
+			document.getElementById(block).className = " card match animated pulse";
+			document.getElementById(storeid).className = " card match animated pulse";
 			c++;
 			if(c==8)
 				$('#outload').modal('show');
@@ -60,7 +60,7 @@ function flip(block)
 			
 		}
 	}
-	document.getElementById(block).className += " open show";
+	document.getElementById(block).className += " open show flipInY";
 	store=document.getElementById(block).children[0].className;
 	storeid=block;
 	
@@ -83,7 +83,7 @@ function reset(block)
 	for(var i=1;i<=16;i++)
 	{
 		console.log(block);
-		if(document.getElementById("block"+i).className=="card unmatch open show" || document.getElementById("block"+i).className=="card unmatch")
+		if(document.getElementById("block"+i).className=="card unmatch open show flipInY" || document.getElementById("block"+i).className=="card unmatch")
 		{
 			document.getElementById("block"+i).className="card ";
 		}
