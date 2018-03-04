@@ -11,27 +11,67 @@ function shuffle(array) {
 
     return array;
 }
+window.onload = function(){
+		$('#onload').modal('show');
+	
+    var min = 0;
+    var sec = 0;
+    setInterval(function(){
+    var a = new Date();
+    if(min<10 && sec<10)
+        document.getElementById("timer").innerHTML ="0"+ min+" min" +" : 0" + sec+" sec" ;
+        else if(min<10)
+        document.getElementById("timer").innerHTML ="0"+ min+" min" +" : " + sec+" sec" ;
+        else if(sec<10)
+        document.getElementById("timer").innerHTML =min+" min" +" : 0" + sec+" sec" ;
+        else
+        document.getElementById("timer").innerHTML = min+" min" +" : " + sec+" sec" ;
+        sec++;
+        if(sec == 60)
+        {
+            min++;
+            sec =0;
+        }
+        },1000);
+}
 var count=0;
 var moves=0;
+var c=0;
 var store,storeid;
 function flip(block)
 {
 	moves++;
-	console.log(document.getElementById('moves'));
 	document.getElementById('moves').innerHTML=moves;
-	if(count==2)
-	reset(block);
-	else
+	document.getElementById('move').innerHTML=moves;
+	if(document.getElementById(block).children[0].className==store)
 	{
-		if(document.getElementById(block).children[0].className==store)
-		{
+		console.log(block);
+		console.log(storeid);
 			document.getElementById(block).className = " card match";
 			document.getElementById(storeid).className = " card match";
+			c++;
+			if(c==8)
+				$('#outload').modal('show');
+	}
+	else{
+		if(count ==1 ){
+			document.getElementById(block).className ="card unmatch";
+			document.getElementById(storeid).className="card unmatch"; 
+			
 		}
+	}
+	document.getElementById(block).className += " open show";
+	store=document.getElementById(block).children[0].className;
+	storeid=block;
+	
+	if(count==1){
+		setTimeout(function(){
+			reset(block);
+		},1000)
 		
-		document.getElementById(block).className += " open show";
-		store=document.getElementById(block).children[0].className;
-		storeid=block;
+	}
+	else
+	{	
 	count++;
 	}
 
@@ -42,14 +82,14 @@ function reset(block)
 	
 	for(var i=1;i<=16;i++)
 	{
-		if(document.getElementById("block"+i).className=="card open show")
+		console.log(block);
+		if(document.getElementById("block"+i).className=="card unmatch open show" || document.getElementById("block"+i).className=="card unmatch")
 		{
-			document.getElementById("block"+i).className="card";
+			document.getElementById("block"+i).className="card ";
 		}
 	}
 	count=0;
-	moves=moves-1;
-	flip(block);
+	store='';storeid='';
 }
 function restart()
 {
