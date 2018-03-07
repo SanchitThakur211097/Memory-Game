@@ -20,3 +20,11 @@ User has to match the pair of cards in as less moves and time as possible. User 
 - Rating is being given to the user based on the performance.
 - Several effects and animations have been added to make the game more attractive and fun.
 - Pop up model created in both beginning and end.
+
+* Code Dependencies-
+
+The app is built with the following code dependencies:
+
+- jQuery
+- Bootstrap
+- javascript

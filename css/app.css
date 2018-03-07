@@ -235,3 +235,6 @@ animation-name:pulse;
     outline: 0;
     align-items: center;
 }
+.disabled{
+    pointer-events: none;
+}
